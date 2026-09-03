@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sidharth Krishna KT — GenAI engineer — LLM systems that have to survive production, not just a notebook</title>
+<meta name="description" content="Sidharth Krishna KT — GenAI engineer — LLM systems that have to survive production, not just a notebook · Kerala, India · open to remote or Bangalore">
+<meta property="og:title" content="Sidharth Krishna KT — GenAI engineer — LLM systems that have to survive production, not just a notebook">
+<meta property="og:description" content="Co-inventor on a published Indian patent for confidence-aware reasoning in colorectal histopathology classification, and most of my other work sits in the same place — models that have to justify themselves before anyone acts on the output.">
+<meta property="og:type" content="profile">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F1F2EF; --surface:#FAFBF8; --ink:#13181A; --body:#414A4B;
+  --muted:#7B8586; --line:#DCE0D9; --accent:#2E4A8F; --accent-ink:#FFFFFF;
+  --wash:#2E4A8F12; --edge:#2E4A8F2E;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#0F1211; --surface:#161A18; --ink:#EDF0EB; --body:#C2C9C4;
+    --muted:#8A938F; --line:#262B28; --accent:#93B4FF; --accent-ink:#0B0E0D;
+    --wash:#93B4FF16; --edge:#93B4FF38;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0F1211; --surface:#161A18; --ink:#EDF0EB; --body:#C2C9C4;
+  --muted:#8A938F; --line:#262B28; --accent:#93B4FF; --accent-ink:#0B0E0D;
+  --wash:#93B4FF16; --edge:#93B4FF38;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--body);
+  font:400 16.5px/1.62 "IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  -webkit-font-smoothing:antialiased;font-variant-numeric:tabular-nums}
+.wrap{max-width:784px;margin:0 auto;padding:0 24px}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:3px}
+
+.bar{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--paper) 86%,transparent);
+  backdrop-filter:saturate(150%) blur(10px);border-bottom:1px solid transparent;transition:border-color .2s}
+.bar.on{border-color:var(--line)}
+.barin{display:flex;align-items:center;gap:18px;height:54px}
+.barname{font-weight:600;font-size:15.5px;letter-spacing:-.01em;color:var(--ink);text-decoration:none;
+  opacity:0;transition:opacity .25s}
+.bar.on .barname{opacity:1}
+.barnav{margin-left:auto;display:flex;gap:22px}
+.barnav a{font:500 12.5px/1 "IBM Plex Mono",ui-monospace,monospace;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .16s}
+.barnav a:hover{color:var(--accent)}
+@media (max-width:640px){.barnav{display:none}}
+
+.hero{padding:56px 0 8px}
+.pill{display:inline-flex;align-items:center;gap:9px;
+  font:500 12px/1 "IBM Plex Mono",ui-monospace,monospace;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--accent);border:1px solid var(--edge);background:var(--wash);
+  padding:7px 12px;border-radius:3px;margin-bottom:24px}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--accent);flex:none}
+h1{font-weight:700;color:var(--ink);font-size:clamp(36px,7vw,54px);line-height:1.02;
+  letter-spacing:-.035em;margin:0 0 14px;text-wrap:balance}
+.role{font-size:clamp(17px,2.3vw,19px);color:var(--ink);font-weight:500;margin:0 0 6px;
+  max-width:48ch;text-wrap:pretty}
+.loc{font:400 13.5px/1.5 "IBM Plex Mono",ui-monospace,monospace;color:var(--muted);margin:0 0 26px}
+.pitch p{font-size:17px;line-height:1.68;margin:0 0 14px;max-width:63ch}
+.actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:500;text-decoration:none;
+  color:var(--ink);background:var(--surface);border:1px solid var(--line);padding:10px 15px;border-radius:4px;
+  transition:border-color .16s,color .16s,background .16s}
+.btn:hover{border-color:var(--edge);color:var(--accent)}
+.btn.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.btn.primary:hover{color:var(--accent-ink);filter:brightness(1.08)}
+.btn svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+
+.band{display:grid;grid-template-columns:124px 1fr;gap:0 32px;
+  border-top:1px solid var(--line);margin-top:48px;padding-top:34px}
+.sec{grid-column:1;margin:0;position:sticky;top:74px;align-self:start;
+  font:500 12px/1.5 "IBM Plex Mono",ui-monospace,monospace;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--muted)}
+.bandbody{grid-column:2;min-width:0}
+@media (max-width:700px){
+  .band{grid-template-columns:1fr;padding-top:28px;margin-top:36px}
+  .sec{position:static;margin-bottom:20px}
+  .bandbody{grid-column:1}
+}
+
+.entries{display:grid;gap:0;list-style:none;padding:0;margin:0}
+.entry{padding:22px 0;border-bottom:1px solid var(--line)}
+.entry:first-child{padding-top:0}
+.entry:last-child{border-bottom:0;padding-bottom:0}
+.entries.plain .entry{border-bottom:0;padding:0 0 26px}
+.entries.plain .entry:last-child{padding-bottom:0}
+.entry h3{font-size:17px;font-weight:600;color:var(--ink);margin:0 0 8px;letter-spacing:-.012em}
+.entry p{margin:0 0 12px;font-size:15.5px;line-height:1.64}
+.head{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 16px;margin-bottom:8px}
+.head h3{margin:0}
+.at{color:var(--muted);font-weight:400}
+.when{margin-left:auto;font:400 12.5px/1.5 "IBM Plex Mono",ui-monospace,monospace;
+  color:var(--muted);white-space:nowrap}
+@media (max-width:560px){.when{margin-left:0}}
+.metric{font:400 13.5px/1.58 "IBM Plex Mono",ui-monospace,monospace;color:var(--ink);
+  background:var(--wash);border:1px solid var(--edge);border-radius:4px;
+  padding:10px 13px;margin:0 0 13px !important;overflow-wrap:anywhere}
+ul.tech{list-style:none;display:flex;flex-wrap:wrap;gap:6px;padding:0;margin:0 0 13px}
+ul.tech li{font:400 12px/1 "IBM Plex Mono",ui-monospace,monospace;color:var(--muted);
+  border:1px solid var(--line);padding:5px 8px;border-radius:3px}
+.links{display:flex;flex-wrap:wrap;gap:18px}
+.ext{display:inline-flex;align-items:center;gap:5px;font-size:14px;font-weight:500;color:var(--accent);
+  text-decoration:none;border-bottom:1px solid transparent;transition:border-color .16s}
+.ext:hover{border-color:currentColor}
+.ext svg{width:11px;height:11px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.pts{margin:0;padding:0 0 0 18px;display:grid;gap:7px}
+.pts li{font-size:15.5px;line-height:1.6}
+.pts li::marker{color:var(--accent)}
+
+.enote{font:400 13px/1.55 "IBM Plex Mono",ui-monospace,monospace;color:var(--muted);margin:6px 0 0 !important}
+.skills{margin:0;display:grid;gap:16px}
+.srow{display:grid;grid-template-columns:118px 1fr;gap:4px 20px;align-items:baseline}
+.srow dt{font:500 11.5px/1.5 "IBM Plex Mono",ui-monospace,monospace;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--muted)}
+.srow dd{margin:0;font-size:15.5px;line-height:1.58;color:var(--body)}
+@media (max-width:560px){.srow{grid-template-columns:1fr}}
+
+footer{margin-top:52px;border-top:1px solid var(--line);padding:26px 0 60px}
+.fin{display:flex;flex-wrap:wrap;gap:12px 22px;align-items:center}
+.fin a{font-size:14.5px;color:var(--body);text-decoration:none;border-bottom:1px solid var(--line)}
+.fin a:hover{color:var(--accent);border-color:var(--accent)}
+.tag{font:500 11px/1 "IBM Plex Mono",ui-monospace,monospace;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--muted);border:1px solid var(--line);padding:5px 9px;border-radius:3px}
+.credit{margin:16px 0 0;font-size:13px;line-height:1.6;color:var(--muted);max-width:66ch}
+@media print{.bar,.actions{display:none}body{background:#fff;color:#000}}
+</style>
+</head>
+<body>
+<div class="bar" id="bar"><div class="wrap barin">
+  <a class="barname" href="#top">Sidharth Krishna KT</a>
+  <nav class="barnav"><a href="#work">Work</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#education">Education</a></nav>
+</div></div>
+
+<main class="wrap" id="top">
+  <header class="hero">
+    <span class="pill"><span class="dot"></span>Open to AI/ML, GenAI and backend roles</span>
+    <h1>Sidharth Krishna KT</h1>
+    <p class="role">GenAI engineer — LLM systems that have to survive production, not just a notebook</p>
+    <p class="loc">Kerala, India · open to remote or Bangalore</p>
+    <div class="pitch"><p>Co-inventor on a published Indian patent for confidence-aware reasoning in colorectal histopathology classification, and most of my other work sits in the same place — models that have to justify themselves before anyone acts on the output.</p><p>Day to day that means RAG pipelines, LoRA fine-tuning, and the unglamorous half nobody writes blog posts about: regression evaluation, evidence verification, provider benchmarking, fallback routing and production monitoring. I&#x27;ve fine-tuned an 8B model on 30,000 samples and I&#x27;ve also been the person who worked out it wasn&#x27;t good enough yet.</p></div>
+    <div class="actions"><a class="btn" href="mailto:sidharthkrishna441@gmail.com">sidharthkrishna441@gmail.com</a><a class="btn" href="https://github.com/Sidharth-06" target="_blank" rel="noopener">GitHub</a></div>
+  </header>
+  
+    <section id="work" class="band">
+      <h2 class="sec">Selected work</h2>
+      <div class="bandbody"><div class="entries">
+        <article class="entry">
+          <h3>Snifdog — infrastructure LLM and incident reasoning</h3>
+          <p>Fine-tuned an 8B Ministral model to turn raw incident logs into validated remediation plans, rather than into a summary someone still has to act on.</p>
+          <p class="metric">30,000+ training samples via LoRA. Benchmarked across 20+ infrastructure scenarios.</p>
+          <ul class="tech"><li>PyTorch</li><li>Transformers</li><li>LoRA</li><li>Multi-GPU training</li></ul>
+          <div class="links"><a class="ext" href="https://github.com/Sidharth-06" target="_blank" rel="noopener">Code<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3.2 8.8 8.8 3.2M8.8 3.2H4.6M8.8 3.2v4.2"/></svg></a></div>
+        </article>
+        <article class="entry">
+          <h3>MedCogNet — explainable histopathology classifier</h3>
+          <p>A colorectal histopathology classifier built so a pathologist can see why it decided what it decided — Vision Transformer with Monte Carlo Dropout, FAISS retrieval and a vision-language explainer.</p>
+          <p class="metric">97% accuracy on NCT-CRC-HE-100K. The approach behind it is co-invented on Indian Patent 202641090388, published 2026.</p>
+          <ul class="tech"><li>Vision Transformer</li><li>FAISS</li><li>Monte Carlo Dropout</li><li>XAI</li></ul>
+          <div class="links"><a class="ext" href="https://github.com/Sidharth-06" target="_blank" rel="noopener">Code<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3.2 8.8 8.8 3.2M8.8 3.2H4.6M8.8 3.2v4.2"/></svg></a></div>
+        </article>
+        <article class="entry">
+          <h3>Swaram — expressive text-to-speech</h3>
+          <p>An 880M-parameter expressive TTS engine with a custom EmotionAdapter, built to train on a single consumer GPU rather than a cluster.</p>
+          <p class="metric">300% higher training throughput on an RTX 4060 using LoRA and offline DAC precomputation.</p>
+          <ul class="tech"><li>Parler-TTS</li><li>LoRA</li><li>PyTorch</li><li>Docker</li></ul>
+          <div class="links"><a class="ext" href="https://github.com/Sidharth-06" target="_blank" rel="noopener">Code<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3.2 8.8 8.8 3.2M8.8 3.2H4.6M8.8 3.2v4.2"/></svg></a></div>
+        </article>
+        <article class="entry">
+          <h3>Sneak — competitive intelligence platform</h3>
+          <p>A full-stack OSINT platform that turns SearXNG, Google News, scraped and crawled sources into board-ready competitive reports, with real-time job tracking, PDF generation and email delivery.</p>
+          
+          <ul class="tech"><li>Next.js</li><li>FastAPI</li><li>PostgreSQL</li><li>Celery</li></ul>
+          <div class="links"><a class="ext" href="https://github.com/Sidharth-06" target="_blank" rel="noopener">Code<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3.2 8.8 8.8 3.2M8.8 3.2H4.6M8.8 3.2v4.2"/></svg></a></div>
+        </article>
+        <article class="entry">
+          <h3>Dew — cross-platform music platform</h3>
+          <p>Synchronised listening across devices with real-time chatrooms, QR/NFC login, advanced audio handling and on-device ML.</p>
+          
+          <ul class="tech"><li>Flutter</li><li>Next.js</li><li>Appwrite</li><li>Cloudflare</li></ul>
+          <div class="links"><a class="ext" href="https://github.com/Sidharth-06" target="_blank" rel="noopener">Code<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3.2 8.8 8.8 3.2M8.8 3.2H4.6M8.8 3.2v4.2"/></svg></a></div>
+        </article></div></div>
+    </section>
+  
+    <section id="experience" class="band">
+      <h2 class="sec">Experience</h2>
+      <div class="bandbody"><ol class="entries plain">
+        <li class="entry">
+          <div class="head">
+            <h3>GenAI Engineer <span class="at">·</span> Sourcesys Technologies</h3>
+            <span class="when">Jan 2026 – present</span>
+          </div>
+          <ul class="pts"><li>Built production GenAI workflows across four LLM providers, turning structured and unstructured data into validated reports and summaries using RAG, FastAPI REST APIs, PostgreSQL and structured outputs — cutting manual report preparation effort.</li><li>Fine-tuned and optimised LLMs for domain-specific use cases with LoRA and quantisation, making inference viable across cloud, on-premise and edge deployments.</li><li>Improved model reliability and deployment stability through regression evaluation, evidence verification, provider benchmarking, human review, fallback routing, Dockerised serving, GitHub Actions CI/CD and production monitoring.</li></ul>
+        </li>
+        <li class="entry">
+          <div class="head">
+            <h3>Research Associate <span class="at">·</span> Applied AI Project (IIM granted project)</h3>
+            <span class="when">Jul 2024 – Jan 2025</span>
+          </div>
+          <ul class="pts"><li>Cut manual analysis effort by 60% across 50+ pitch recordings by automating Whisper transcription, pyannote diarisation, sentiment and tone analysis, preprocessing and batch inference.</li><li>Standardised feature and output validation, evaluation reports, Label Studio review, QA traceability, artifact storage and failure analysis so results were reproducible for stakeholders.</li></ul>
+        </li></ol></div>
+    </section>
+  
+    <section id="skills" class="band">
+      <h2 class="sec">Skills</h2>
+      <div class="bandbody"><dl class="skills"><div class="srow"><dt>GenAI &amp; NLP</dt><dd>LLM application development, RAG, AI agents, agentic workflows, tool calling, prompt engineering, summarisation, LangGraph, LangChain, AutoGen, MCP, OpenAI, Anthropic, Hugging Face, open-weight LLMs</dd></div><div class="srow"><dt>ML &amp; optimisation</dt><dd>PyTorch, Transformers, Scikit-learn, LoRA, PEFT, quantisation, model evaluation, feature engineering, mixed-precision and multi-GPU training</dd></div><div class="srow"><dt>Data &amp; backend</dt><dd>Python, SQL, PostgreSQL, Pandas, NumPy, FastAPI, REST APIs, Pydantic, Apache Spark basics</dd></div><div class="srow"><dt>MLOps &amp; cloud</dt><dd>Model serving, batch and online inference, Docker, Kubernetes, GitHub Actions, CI/CD, monitoring, AWS, GCP, Azure</dd></div></dl></div>
+    </section>
+  
+    <section id="education" class="band">
+      <h2 class="sec">Education</h2>
+      <div class="bandbody"><ul class="entries plain">
+        <li class="entry">
+          <div class="head">
+            <h3>Integrated Master of Computer Applications</h3>
+            <span class="when">2021 – 2026</span>
+          </div>
+          <p>Amrita Vishwa Vidyapeetham, Mysuru</p>
+          
+        </li></ul></div>
+    </section>
+</main>
+
+<footer><div class="wrap">
+  <div class="fin">
+    <a href="mailto:sidharthkrishna441@gmail.com">sidharthkrishna441@gmail.com</a>
+    <a href="https://github.com/Sidharth-06" target="_blank" rel="noopener">GitHub</a>
+    
+  </div>
+  <p class="credit">Built from Sidharth&#x27;s own resume. Every line here is something he wrote — nothing invented, nothing embellished.</p>
+</div></footer>
+
+<script>
+(function(){
+  var bar=document.getElementById('bar');
+  var f=function(){bar.classList.toggle('on',window.scrollY>56)};
+  addEventListener('scroll',f,{passive:true});f();
+})();
+</script>
+</body>
+</html>
