@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Saffron &amp; Salt — A home bakery in Kothrud making small-batch cakes, bakes and celebration boxes to order.</title>
+<meta name="description" content="Small-batch home bakery in Pune. Custom cakes, brownies and celebration boxes, made to order.">
+<meta property="og:title" content="Saffron &amp; Salt">
+<meta property="og:description" content="A home bakery in Kothrud making small-batch cakes, bakes and celebration boxes to order.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--accent:#b45309;--accent-dark:#92400e;--ink:#1a1714;--muted:#6b625b;--bg:#fdfbf8;--card:#fff;--line:#ece5dd;--radius:16px}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 Inter,system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:700;line-height:1.15;margin:0}
+p{margin:0}
+a{color:inherit}
+.wrap{max-width:820px;margin:0 auto;padding:0 22px}
+section{padding:64px 0;border-top:1px solid var(--line)}
+.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:12px}
+.lead{color:var(--muted);font-size:17px;margin-top:14px}
+
+/* hero */
+.hero{padding:76px 0 60px;border:0;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:-40% -20% auto -20%;height:520px;background:radial-gradient(60% 60% at 50% 40%,color-mix(in srgb,var(--accent) 16%,transparent),transparent 70%);pointer-events:none}
+.hero .wrap{position:relative}
+.hero h1{font-size:clamp(38px,8vw,62px);letter-spacing:-.02em}
+.hero .tag{font-size:clamp(17px,3.4vw,20px);color:var(--muted);margin-top:16px;max-width:34ch}
+.loc{display:inline-flex;align-items:center;gap:7px;margin-top:22px;font-size:14px;color:var(--muted)}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--accent)}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 24px;border-radius:999px;font-weight:600;font-size:15px;text-decoration:none;transition:transform .15s ease,box-shadow .15s ease,background .15s ease}
+.btn.solid{background:var(--accent);color:#fff;box-shadow:0 6px 20px -6px color-mix(in srgb,var(--accent) 60%,transparent)}
+.btn.solid:hover{transform:translateY(-2px);background:var(--accent-dark)}
+.btn.ghost{border:1px solid var(--line);background:var(--card);color:var(--ink)}
+.btn.ghost:hover{border-color:var(--accent);color:var(--accent)}
+
+/* highlights */
+.hls{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px;margin-top:36px}
+.hl{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.hl-ico{font-size:24px;margin-bottom:12px}
+.hl h3{font-size:17px;margin-bottom:7px}
+.hl p{font-size:14.5px;color:var(--muted)}
+
+/* offerings */
+.items{list-style:none;padding:0;margin:34px 0 0;border-top:1px solid var(--line)}
+.item{display:flex;gap:18px;justify-content:space-between;align-items:baseline;padding:20px 2px;border-bottom:1px solid var(--line)}
+.item h3{font-size:17.5px}
+.item p{font-size:14.5px;color:var(--muted);margin-top:5px;max-width:46ch}
+.item-price{font-family:Fraunces,serif;font-weight:600;font-size:17px;white-space:nowrap;color:var(--accent)}
+
+/* quotes */
+.quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin-top:34px}
+.quote{margin:0;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:0 var(--radius) var(--radius) 0;padding:24px}
+.quote blockquote{margin:0;font-size:15.5px}
+.quote figcaption{margin-top:14px;font-size:13.5px;color:var(--muted);font-weight:500}
+
+/* hours + contact */
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:38px;margin-top:32px}
+.hrow{display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--line);font-size:15px}
+.hrow span:last-child{color:var(--muted)}
+.linkcol{display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+.addr{font-size:15px;color:var(--muted);margin-bottom:6px}
+
+footer{padding:44px 0 110px;text-align:center;color:var(--muted);font-size:13.5px;border-top:1px solid var(--line)}
+
+/* sticky whatsapp */
+.sticky{position:fixed;left:0;right:0;bottom:0;padding:12px 22px calc(12px + env(safe-area-inset-bottom));background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-top:1px solid var(--line);z-index:50}
+.sticky .btn{width:100%;max-width:420px;margin:0 auto;display:flex}
+@media(min-width:760px){.sticky{display:none}footer{padding-bottom:44px}}
+
+/* content is never hidden: entrance is a pure-CSS fade that cannot fail */
+@keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.reveal{animation:rise .5s ease both}
+@media(prefers-reduced-motion:reduce){.reveal{animation:none}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>Saffron &amp; Salt</h1>
+    <p class="tag">A home bakery in Kothrud making small-batch cakes, bakes and celebration boxes to order.</p>
+    <span class="loc"><span class="dot"></span>Kothrud, Pune</span>
+    <div class="cta-row"><a class="btn solid" href="https://wa.me/919000000001?text=Hi%20Saffron%20%26%20Salt%2C%20I%27d%20like%20to%20place%20an%20order." target="_blank" rel="noopener">Order on WhatsApp</a><a class="btn ghost" href="tel:+91 90000 00001">Call +91 90000 00001</a><a class="btn ghost" href="https://instagram.com/saffronandsalt.pune" target="_blank" rel="noopener">@saffronandsalt.pune</a></div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap">
+    <div class="eyebrow">About</div>
+    <h2>Everything is baked the morning it reaches you.</h2>
+    <p class="lead">We started in 2021 out of a home kitchen and never moved to bulk production. Every order is made fresh on the day, in quantities small enough that we can still taste-check each batch. No preservatives, no ready-made mixes, no last-week stock.</p>
+    <div class="hls">
+        <div class="hl reveal">
+          <div class="hl-ico" aria-hidden="true">🥣</div>
+          <h3>Made to order</h3><p>Nothing sits on a shelf. Place an order 24 hours ahead and it&#x27;s baked that morning.</p>
+        </div>
+        <div class="hl reveal">
+          <div class="hl-ico" aria-hidden="true">🌾</div>
+          <h3>Eggless on request</h3><p>Almost the entire menu can be made eggless without changing the texture. Just mention it.</p>
+        </div>
+        <div class="hl reveal">
+          <div class="hl-ico" aria-hidden="true">🛵</div>
+          <h3>Delivered across Pune</h3><p>Free delivery within Kothrud. Everywhere else in Pune at actual courier cost.</p>
+        </div></div>
+  </div>
+</section>
+
+<section id="menu">
+  <div class="wrap">
+    <div class="eyebrow">The menu</div>
+    <h2>What we bake</h2>
+    <ul class="items">
+        <li class="item reveal">
+          <div class="item-main">
+            <h3>Classic Belgian chocolate cake</h3>
+            <p>Half kg or one kg. Dark, not too sweet, with a soft ganache layer.</p>
+          </div>
+          <div class="item-price">₹750 / ₹1,400</div>
+        </li>
+        <li class="item reveal">
+          <div class="item-main">
+            <h3>Fudge brownie box</h3>
+            <p>Nine pieces, dense centre, walnut optional.</p>
+          </div>
+          <div class="item-price">₹520</div>
+        </li>
+        <li class="item reveal">
+          <div class="item-main">
+            <h3>Custom celebration cake</h3>
+            <p>Your flavour, your message, your photo reference. Order three days ahead.</p>
+          </div>
+          <div class="item-price">from ₹1,200</div>
+        </li>
+        <li class="item reveal">
+          <div class="item-main">
+            <h3>Tea-time hamper</h3>
+            <p>Banana bread, six cookies and a jar of granola. Popular as a gift.</p>
+          </div>
+          <div class="item-price">₹890</div>
+        </li>
+        <li class="item reveal">
+          <div class="item-main">
+            <h3>Cheesecake, baked</h3>
+            <p>New York style, blueberry or plain. Half kg.</p>
+          </div>
+          <div class="item-price">₹980</div>
+        </li></ul>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <div class="eyebrow">In their words</div>
+    <h2>What people say</h2>
+    <div class="quotes">
+        <figure class="quote reveal">
+          <blockquote>Ordered a last-minute anniversary cake and it arrived exactly on time and looked better than the reference photo I sent.</blockquote>
+          <figcaption>Ritika D. — Baner</figcaption>
+        </figure>
+        <figure class="quote reveal">
+          <blockquote>The brownies are the only ones my mother will eat. That is genuinely the highest praise available in our house.</blockquote>
+          <figcaption>Aniket S. — Kothrud</figcaption>
+        </figure></div>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap">
+    <div class="eyebrow">Visit &amp; order</div>
+    <h2>Order or drop by</h2>
+    <div class="cols">
+      <div><h3 style="font-size:16px;margin-bottom:10px">Hours</h3>
+        <div class="hrow"><span>Monday – Friday</span><span>9:00 am – 8:00 pm</span></div>
+        <div class="hrow"><span>Saturday</span><span>9:00 am – 9:00 pm</span></div>
+        <div class="hrow"><span>Sunday</span><span>Pre-orders only</span></div></div>
+      <div>
+        <p class="addr">Lane 5, Kothrud, Pune 411038</p>
+        <p style="margin-bottom:16px"><a href="https://www.google.com/maps/search/?api=1&query=Kothrud%20Pune" target="_blank" rel="noopener" style="color:var(--accent);font-weight:600;font-size:14.5px">Open in Google Maps &rarr;</a></p>
+        <div class="linkcol"><a class="btn solid" href="https://wa.me/919000000001?text=Hi%20Saffron%20%26%20Salt%2C%20I%27d%20like%20to%20place%20an%20order." target="_blank" rel="noopener">Order on WhatsApp</a><a class="btn ghost" href="tel:+91 90000 00001">Call +91 90000 00001</a><a class="btn ghost" href="https://instagram.com/saffronandsalt.pune" target="_blank" rel="noopener">@saffronandsalt.pune</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">&copy; 2026 Saffron &amp; Salt &middot; Kothrud, Pune</div></footer>
+
+<div class="sticky"><a class="btn solid" href="https://wa.me/919000000001?text=Hi%20Saffron%20%26%20Salt%2C%20I%27d%20like%20to%20place%20an%20order." target="_blank" rel="noopener">Order on WhatsApp</a></div>
+
+</body>
+</html>
